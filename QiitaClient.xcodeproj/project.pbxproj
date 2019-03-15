@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF20A108223BF9F700CC4275 /* QiitaClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20A107223BF9F700CC4275 /* QiitaClientTests.swift */; };
+		BF20A10F223BFB4300CC4275 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCE40A3223BF98700935AF4 /* Nimble.framework */; };
+		BF20A110223BFB4300CC4275 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCE40A4223BF98700935AF4 /* Quick.framework */; };
+		BF20A112223BFB7300CC4275 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BFCE40A3223BF98700935AF4 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BF20A113223BFB7300CC4275 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BFCE40A4223BF98700935AF4 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BFFD7C18223A9C7200AB761D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFD7C17223A9C7200AB761D /* AppDelegate.swift */; };
 		BFFD7C1F223A9C7A00AB761D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFFD7C1E223A9C7A00AB761D /* Assets.xcassets */; };
 		BFFD7C22223A9C7A00AB761D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFFD7C20223A9C7A00AB761D /* LaunchScreen.storyboard */; };
@@ -24,7 +29,36 @@
 		BFFD7C47223BD22D00AB761D /* TrendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFD7C46223BD22D00AB761D /* TrendViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BF20A10A223BF9F700CC4275 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFFD7C0C223A9C7200AB761D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFFD7C13223A9C7200AB761D;
+			remoteInfo = QiitaClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BF20A111223BFB4900CC4275 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BF20A112223BFB7300CC4275 /* Nimble.framework in CopyFiles */,
+				BF20A113223BFB7300CC4275 /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		BF20A105223BF9F600CC4275 /* QiitaClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QiitaClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF20A107223BF9F700CC4275 /* QiitaClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaClientTests.swift; sourceTree = "<group>"; };
+		BF20A109223BF9F700CC4275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFCE40A3223BF98700935AF4 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		BFCE40A4223BF98700935AF4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		BFFD7C14223A9C7200AB761D /* QiitaClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiitaClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFD7C17223A9C7200AB761D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFFD7C1E223A9C7A00AB761D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,6 +79,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BF20A102223BF9F600CC4275 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF20A10F223BFB4300CC4275 /* Nimble.framework in Frameworks */,
+				BF20A110223BFB4300CC4275 /* Quick.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BFFD7C11223A9C7200AB761D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -60,10 +103,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF20A106223BF9F700CC4275 /* QiitaClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF20A107223BF9F700CC4275 /* QiitaClientTests.swift */,
+				BF20A109223BF9F700CC4275 /* Info.plist */,
+			);
+			path = QiitaClientTests;
+			sourceTree = "<group>";
+		};
 		BFFD7C0B223A9C7200AB761D = {
 			isa = PBXGroup;
 			children = (
 				BFFD7C16223A9C7200AB761D /* QiitaClient */,
+				BF20A106223BF9F700CC4275 /* QiitaClientTests */,
 				BFFD7C15223A9C7200AB761D /* Products */,
 				BFFD7C29223A9EBE00AB761D /* Frameworks */,
 			);
@@ -73,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				BFFD7C14223A9C7200AB761D /* QiitaClient.app */,
+				BF20A105223BF9F600CC4275 /* QiitaClientTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +149,8 @@
 		BFFD7C29223A9EBE00AB761D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BFCE40A3223BF98700935AF4 /* Nimble.framework */,
+				BFCE40A4223BF98700935AF4 /* Quick.framework */,
 				BFFD7C3F223AA94800AB761D /* Kanna.framework */,
 				BFFD7C39223AA0DA00AB761D /* Alamofire.framework */,
 				BFFD7C2A223A9EBE00AB761D /* RxAtomic.framework */,
@@ -150,6 +206,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BF20A104223BF9F600CC4275 /* QiitaClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF20A10C223BF9F700CC4275 /* Build configuration list for PBXNativeTarget "QiitaClientTests" */;
+			buildPhases = (
+				BF20A101223BF9F600CC4275 /* Sources */,
+				BF20A102223BF9F600CC4275 /* Frameworks */,
+				BF20A103223BF9F600CC4275 /* Resources */,
+				BF20A111223BFB4900CC4275 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF20A10B223BF9F700CC4275 /* PBXTargetDependency */,
+			);
+			name = QiitaClientTests;
+			productName = QiitaClientTests;
+			productReference = BF20A105223BF9F600CC4275 /* QiitaClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		BFFD7C13223A9C7200AB761D /* QiitaClient */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFFD7C26223A9C7A00AB761D /* Build configuration list for PBXNativeTarget "QiitaClient" */;
@@ -178,6 +253,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "ry-itto";
 				TargetAttributes = {
+					BF20A104223BF9F600CC4275 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = BFFD7C13223A9C7200AB761D;
+					};
 					BFFD7C13223A9C7200AB761D = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -197,11 +276,19 @@
 			projectRoot = "";
 			targets = (
 				BFFD7C13223A9C7200AB761D /* QiitaClient */,
+				BF20A104223BF9F600CC4275 /* QiitaClientTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BF20A103223BF9F600CC4275 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BFFD7C12223A9C7200AB761D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -241,6 +328,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BF20A101223BF9F600CC4275 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF20A108223BF9F700CC4275 /* QiitaClientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BFFD7C10223A9C7200AB761D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,6 +351,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		BF20A10B223BF9F700CC4275 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFFD7C13223A9C7200AB761D /* QiitaClient */;
+			targetProxy = BF20A10A223BF9F700CC4275 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		BFFD7C20223A9C7A00AB761D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -268,6 +371,54 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		BF20A10D223BF9F700CC4275 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DFY27HWN2G;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = QiitaClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ry-itto.QiitaClientTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QiitaClient.app/QiitaClient";
+			};
+			name = Debug;
+		};
+		BF20A10E223BF9F700CC4275 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DFY27HWN2G;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = QiitaClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ry-itto.QiitaClientTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QiitaClient.app/QiitaClient";
+			};
+			name = Release;
+		};
 		BFFD7C24223A9C7A00AB761D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -433,6 +584,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BF20A10C223BF9F700CC4275 /* Build configuration list for PBXNativeTarget "QiitaClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF20A10D223BF9F700CC4275 /* Debug */,
+				BF20A10E223BF9F700CC4275 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BFFD7C0F223A9C7200AB761D /* Build configuration list for PBXProject "QiitaClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
