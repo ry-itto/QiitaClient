@@ -12,6 +12,14 @@
 		BF20A110223BFB4300CC4275 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCE40A4223BF98700935AF4 /* Quick.framework */; };
 		BF20A112223BFB7300CC4275 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BFCE40A3223BF98700935AF4 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF20A113223BFB7300CC4275 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BFCE40A4223BF98700935AF4 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BF20A115223C0BBB00CC4275 /* TrendHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20A114223C0BBB00CC4275 /* TrendHeaderView.swift */; };
+		BF20A117223C0BE900CC4275 /* TrendHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF20A116223C0BE900CC4275 /* TrendHeaderView.xib */; };
+		BF20A11A223CA61500CC4275 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20A118223CA61500CC4275 /* SearchViewController.swift */; };
+		BF20A11B223CA61500CC4275 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF20A119223CA61500CC4275 /* SearchViewController.xib */; };
+		BF20A11D223CA7E800CC4275 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BF20A11C223CA7E800CC4275 /* Settings.bundle */; };
+		BF20A11F223CAFDC00CC4275 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20A11E223CAFDC00CC4275 /* SearchViewModel.swift */; };
+		BF20A121223CB61700CC4275 /* QiitaAPIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20A120223CB61700CC4275 /* QiitaAPIModels.swift */; };
+		BF20A123223CC1F400CC4275 /* QiitaSearchDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20A122223CC1F400CC4275 /* QiitaSearchDataProvider.swift */; };
 		BFFD7C18223A9C7200AB761D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFD7C17223A9C7200AB761D /* AppDelegate.swift */; };
 		BFFD7C1F223A9C7A00AB761D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFFD7C1E223A9C7A00AB761D /* Assets.xcassets */; };
 		BFFD7C22223A9C7A00AB761D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFFD7C20223A9C7A00AB761D /* LaunchScreen.storyboard */; };
@@ -57,6 +65,14 @@
 		BF20A105223BF9F600CC4275 /* QiitaClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QiitaClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF20A107223BF9F700CC4275 /* QiitaClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaClientTests.swift; sourceTree = "<group>"; };
 		BF20A109223BF9F700CC4275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF20A114223C0BBB00CC4275 /* TrendHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendHeaderView.swift; sourceTree = "<group>"; };
+		BF20A116223C0BE900CC4275 /* TrendHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendHeaderView.xib; sourceTree = "<group>"; };
+		BF20A118223CA61500CC4275 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		BF20A119223CA61500CC4275 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		BF20A11C223CA7E800CC4275 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		BF20A11E223CAFDC00CC4275 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		BF20A120223CB61700CC4275 /* QiitaAPIModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAPIModels.swift; sourceTree = "<group>"; };
+		BF20A122223CC1F400CC4275 /* QiitaSearchDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaSearchDataProvider.swift; sourceTree = "<group>"; };
 		BFCE40A3223BF98700935AF4 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		BFCE40A4223BF98700935AF4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		BFFD7C14223A9C7200AB761D /* QiitaClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiitaClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +131,7 @@
 		BFFD7C0B223A9C7200AB761D = {
 			isa = PBXGroup;
 			children = (
+				BF20A11C223CA7E800CC4275 /* Settings.bundle */,
 				BFFD7C16223A9C7200AB761D /* QiitaClient */,
 				BF20A106223BF9F700CC4275 /* QiitaClientTests */,
 				BFFD7C15223A9C7200AB761D /* Products */,
@@ -166,6 +183,10 @@
 				BFFD7C41223BC7FF00AB761D /* Cell */,
 				BFFD7C35223AA05A00AB761D /* TrendsViewController.swift */,
 				BFFD7C36223AA05A00AB761D /* TrendsViewController.xib */,
+				BF20A114223C0BBB00CC4275 /* TrendHeaderView.swift */,
+				BF20A116223C0BE900CC4275 /* TrendHeaderView.xib */,
+				BF20A118223CA61500CC4275 /* SearchViewController.swift */,
+				BF20A119223CA61500CC4275 /* SearchViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -174,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				BFFD7C46223BD22D00AB761D /* TrendViewModel.swift */,
+				BF20A11E223CAFDC00CC4275 /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -182,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				BFFD7C3B223AA22100AB761D /* QiitaAPIGateway.swift */,
+				BF20A120223CB61700CC4275 /* QiitaAPIModels.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -190,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				BFFD7C3D223AA6C100AB761D /* QiitaTrendDataProvider.swift */,
+				BF20A122223CC1F400CC4275 /* QiitaSearchDataProvider.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -293,10 +317,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF20A11B223CA61500CC4275 /* SearchViewController.xib in Resources */,
 				BFFD7C38223AA05A00AB761D /* TrendsViewController.xib in Resources */,
 				BFFD7C45223BC84C00AB761D /* QiitaArticleCell.xib in Resources */,
 				BFFD7C22223A9C7A00AB761D /* LaunchScreen.storyboard in Resources */,
 				BFFD7C1F223A9C7A00AB761D /* Assets.xcassets in Resources */,
+				BF20A117223C0BE900CC4275 /* TrendHeaderView.xib in Resources */,
+				BF20A11D223CA7E800CC4275 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,12 +367,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF20A11A223CA61500CC4275 /* SearchViewController.swift in Sources */,
 				BFFD7C44223BC84C00AB761D /* QiitaArticleCell.swift in Sources */,
 				BFFD7C3E223AA6C100AB761D /* QiitaTrendDataProvider.swift in Sources */,
+				BF20A115223C0BBB00CC4275 /* TrendHeaderView.swift in Sources */,
 				BFFD7C37223AA05A00AB761D /* TrendsViewController.swift in Sources */,
+				BF20A121223CB61700CC4275 /* QiitaAPIModels.swift in Sources */,
 				BFFD7C3C223AA22100AB761D /* QiitaAPIGateway.swift in Sources */,
+				BF20A11F223CAFDC00CC4275 /* SearchViewModel.swift in Sources */,
 				BFFD7C47223BD22D00AB761D /* TrendViewModel.swift in Sources */,
 				BFFD7C18223A9C7200AB761D /* AppDelegate.swift in Sources */,
+				BF20A123223CC1F400CC4275 /* QiitaSearchDataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
