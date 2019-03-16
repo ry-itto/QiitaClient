@@ -22,18 +22,29 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gS4-f3-oM3">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <rect key="frame" x="0.0" y="90" width="375" height="577"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1b-QO-Y1N" customClass="TrendHeaderView" customModule="QiitaClient" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="20" width="375" height="70"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="UgS-oc-S3n"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="gS4-f3-oM3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Hf6-q7-1qJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="c1b-QO-Y1N" secondAttribute="trailing" id="3DM-qd-3fL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gS4-f3-oM3" secondAttribute="bottom" id="Tc9-di-GOv"/>
+                <constraint firstItem="gS4-f3-oM3" firstAttribute="top" secondItem="c1b-QO-Y1N" secondAttribute="bottom" id="eeX-fM-Uap"/>
+                <constraint firstItem="c1b-QO-Y1N" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gjl-X0-WHB"/>
+                <constraint firstItem="c1b-QO-Y1N" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="mOi-Td-X46"/>
                 <constraint firstItem="gS4-f3-oM3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nQv-dr-LRY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gS4-f3-oM3" secondAttribute="trailing" id="oT4-4g-Ra7"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="140" y="129.98500749625188"/>
         </view>
     </objects>
 </document>

@@ -10,11 +10,11 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class TrendsViewController: UIViewController {
+final class TrendsViewController: UIViewController {
     
     private let disposeBag = DisposeBag()
     
-    @IBOutlet var tableView: UITableView! {
+    @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.register(UINib(nibName: "QiitaArticleCell", bundle: nil), forCellReuseIdentifier: QiitaArticleCell.cellIdentifier)
             tableView.estimatedRowHeight = 92
