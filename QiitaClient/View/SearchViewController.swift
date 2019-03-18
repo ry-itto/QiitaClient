@@ -38,7 +38,6 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bindViewModel()
-        print(QiitaSearchDataProvider().fetchArticles(query: "qiita"))
     }
     
     override func viewWillDisappear(_ animated: Bool) {

@@ -15,9 +15,18 @@ final class QiitaAPIGateway {
     
     let accessToken: String
     
-    init() {
-        accessToken = UserDefaults.init().string(forKey: "qiita_access_token")!
+    lazy var decoder: JSONDecoder = {
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        decoder.dateDecodingStrategy = .iso8601
+        return decoder
+    }()
+    
+    private init() {
+        accessToken = UserDefaults.standard.string(forKey: "qiita_access_token")!
     }
+    
+    static let shared = QiitaAPIGateway()
     
     /// QiitaAPI v2 記事一覧検索
     /// https://qiita.com/api/v2/docs#get-apiv2items
@@ -29,21 +38,11 @@ final class QiitaAPIGateway {
     ///     - after: APIリクエスト後の処理
     ///     - response: APIリクエスト結果, エラー時nil
     ///     - error: エラー内容, エラー時以外nil
-    func fetchArticles(page: Int = 1, perPage: Int = 20, query: String, after: @escaping (_ response: [QiitaAPI.Article], _ error: QiitaAPI.APIError?) -> Void) {
+    func fetchArticles(page: Int = 1, perPage: Int = 20, query: String) -> DataRequest {
         let path = "/api/v2/items?page=\(page)&perPage=\(perPage)&query=\(query)"
-        guard let requestURL = URL(string: path, relativeTo: host) else { return }
-        let decoder: JSONDecoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        decoder.dateDecodingStrategy = .iso8601
+        let requestURL = URL(string: path, relativeTo: host)
         
-        Alamofire.request(requestURL).responseJSON { response in
-            do {
-                let decoded = try decoder.decode([QiitaAPI.Article].self, from: response.data!)
-                after(decoded, nil)
-            } catch {
-                after([], .decode)
-            }
-        }
+        return Alamofire.request(requestURL!)
     }
     
     /// QiitaAPI v2 記事一覧検索
@@ -59,30 +58,6 @@ final class QiitaAPIGateway {
         decoder.dateDecodingStrategy = .iso8601
         
         return Alamofire.request(requestURL!)
-    }
-    
-    /// QiitaAPI v2 タグ一覧取得
-    /// https://qiita.com/api/v2/docs#get-apiv2tags
-    ///
-    /// - Parameters:
-    ///     - after: APIリクエスト後の処理
-    ///     - response: APIリクエスト結果 エラー時nil
-    ///     - error: エラー内容　エラー時以外nil
-    ///
-    func fetchTagList(after: @escaping (_ response: [QiitaAPI.TagInfo], _ error: QiitaAPI.APIError?) -> Void) {
-        let path = "/api/v2/tags?sort=count"
-        guard let requestURL = URL(string: path, relativeTo: host) else { return }
-        let decoder: JSONDecoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        
-        Alamofire.request(requestURL).responseJSON { response in
-            do {
-                let decoded = try decoder.decode([QiitaAPI.TagInfo].self, from: response.data!)
-                after(decoded, nil)
-            } catch {
-                after([], .decode)
-            }
-        }
     }
 }
 
