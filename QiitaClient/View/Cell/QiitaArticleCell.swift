@@ -41,6 +41,13 @@ class QiitaArticleCell: UITableViewCell {
         self.goodCount.text = "\(model.node.likesCount)"
     }
     
+    func configure(model: QiitaAPI.Article) {
+        self.thumbnailImage.image = fetchImageFromURL(url: model.user.profileImageUrl!)
+        self.title.text = model.title
+        self.userName.text = model.user.name
+        self.goodCount.text = "\(model.likesCount)"
+    }
+    
     fileprivate func fetchImageFromURL(url: URL) -> UIImage? {
         guard let data = try? Data(contentsOf: url) else { return nil }
         

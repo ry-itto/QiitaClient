@@ -21,7 +21,10 @@ final class TrendsViewController: UIViewController {
             tableView.rowHeight = UITableView.automaticDimension
         }
     }
-    let viewModel: TrendViewModel = TrendViewModel()
+    lazy var viewModel: TrendViewModel = {
+        let modelSelected = tableView.rx.modelSelected(Trend.TrendArticle.self).asObservable()
+        return TrendViewModel(modelSelected: modelSelected)
+    }()
     
     static func instantiateWithTabBarItem() -> UINavigationController {
         let viewController = UINavigationController(rootViewController: TrendsViewController())
@@ -52,9 +55,9 @@ final class TrendsViewController: UIViewController {
                 cell.configure(model: article)
             }.disposed(by: disposeBag)
         
-//        tableView.rx.modelSelected(Trend.TrendArticle.self)
-//            .subscribe(onNext: { [weak self] article in
-//                self?.navigationController?.pushViewController(WebViewController(url: article), animated: true)
-//            }).disposed(by: disposeBag)
+        viewModel.showWebView
+            .bind(to: Binder(self) { me, url in
+                me.navigationController?.pushViewController(WebViewController(url: url), animated: true)
+            }).disposed(by: disposeBag)
     }
 }

@@ -46,6 +46,21 @@ final class QiitaAPIGateway {
         }
     }
     
+    /// QiitaAPI v2 記事一覧検索
+    /// https://qiita.com/api/v2/docs#get-apiv2items
+    ///
+    /// - Parameters:
+    ///     - itemId: 記事ID
+    func fetchArticle(itemId: String) -> DataRequest {
+        let path = "/api/v2/items/\(itemId)"
+        let requestURL = URL(string: path, relativeTo: host)
+        let decoder: JSONDecoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        decoder.dateDecodingStrategy = .iso8601
+        
+        return Alamofire.request(requestURL!)
+    }
+    
     /// QiitaAPI v2 タグ一覧取得
     /// https://qiita.com/api/v2/docs#get-apiv2tags
     ///
