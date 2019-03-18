@@ -41,6 +41,16 @@ class SearchViewController: UIViewController {
         print(QiitaSearchDataProvider().fetchArticles(query: "qiita"))
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     fileprivate func bindViewModel() {
         
         viewModel.searchResult

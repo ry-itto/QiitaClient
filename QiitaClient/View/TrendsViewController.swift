@@ -36,15 +36,25 @@ final class TrendsViewController: UIViewController {
         viewModel.viewDidLoad.onNext(())
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     fileprivate func bindViewModel() {
         viewModel.articles
             .bind(to: tableView.rx.items(cellIdentifier: QiitaArticleCell.cellIdentifier, cellType: QiitaArticleCell.self)) { row, article, cell in
                 cell.configure(model: article)
             }.disposed(by: disposeBag)
         
-        tableView.rx.modelSelected(Trend.TrendArticle.self)
-            .subscribe(onNext: { [weak self] article in
-                self?.navigationController?.pushViewController(WebViewController(url: article), animated: true)
-            }).disposed(by: disposeBag)
+//        tableView.rx.modelSelected(Trend.TrendArticle.self)
+//            .subscribe(onNext: { [weak self] article in
+//                self?.navigationController?.pushViewController(WebViewController(url: article), animated: true)
+//            }).disposed(by: disposeBag)
     }
 }
