@@ -20,6 +20,9 @@
 		BF20A11F223CAFDC00CC4275 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20A11E223CAFDC00CC4275 /* SearchViewModel.swift */; };
 		BF20A121223CB61700CC4275 /* QiitaAPIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20A120223CB61700CC4275 /* QiitaAPIModels.swift */; };
 		BF20A123223CC1F400CC4275 /* QiitaSearchDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20A122223CC1F400CC4275 /* QiitaSearchDataProvider.swift */; };
+		BF20A148223DE5B700CC4275 /* QiitaArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF20A147223DE5B700CC4275 /* QiitaArticleCell.xib */; };
+		BFF669E8223FDFD400A3976C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF669E7223FDFD400A3976C /* WebViewController.swift */; };
+		BFF669EA223FDFF200A3976C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF669E9223FDFF200A3976C /* WebKit.framework */; };
 		BFFD7C18223A9C7200AB761D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFD7C17223A9C7200AB761D /* AppDelegate.swift */; };
 		BFFD7C1F223A9C7A00AB761D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFFD7C1E223A9C7A00AB761D /* Assets.xcassets */; };
 		BFFD7C22223A9C7A00AB761D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFFD7C20223A9C7A00AB761D /* LaunchScreen.storyboard */; };
@@ -33,7 +36,6 @@
 		BFFD7C3E223AA6C100AB761D /* QiitaTrendDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFD7C3D223AA6C100AB761D /* QiitaTrendDataProvider.swift */; };
 		BFFD7C40223AA94800AB761D /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFD7C3F223AA94800AB761D /* Kanna.framework */; };
 		BFFD7C44223BC84C00AB761D /* QiitaArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFD7C42223BC84C00AB761D /* QiitaArticleCell.swift */; };
-		BFFD7C45223BC84C00AB761D /* QiitaArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFD7C43223BC84C00AB761D /* QiitaArticleCell.xib */; };
 		BFFD7C47223BD22D00AB761D /* TrendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFD7C46223BD22D00AB761D /* TrendViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,8 +75,11 @@
 		BF20A11E223CAFDC00CC4275 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		BF20A120223CB61700CC4275 /* QiitaAPIModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAPIModels.swift; sourceTree = "<group>"; };
 		BF20A122223CC1F400CC4275 /* QiitaSearchDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaSearchDataProvider.swift; sourceTree = "<group>"; };
+		BF20A147223DE5B700CC4275 /* QiitaArticleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QiitaArticleCell.xib; sourceTree = "<group>"; };
 		BFCE40A3223BF98700935AF4 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		BFCE40A4223BF98700935AF4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		BFF669E7223FDFD400A3976C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		BFF669E9223FDFF200A3976C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		BFFD7C14223A9C7200AB761D /* QiitaClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiitaClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFD7C17223A9C7200AB761D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFFD7C1E223A9C7A00AB761D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -90,7 +95,6 @@
 		BFFD7C3D223AA6C100AB761D /* QiitaTrendDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaTrendDataProvider.swift; sourceTree = "<group>"; };
 		BFFD7C3F223AA94800AB761D /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
 		BFFD7C42223BC84C00AB761D /* QiitaArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaArticleCell.swift; sourceTree = "<group>"; };
-		BFFD7C43223BC84C00AB761D /* QiitaArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QiitaArticleCell.xib; sourceTree = "<group>"; };
 		BFFD7C46223BD22D00AB761D /* TrendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFF669EA223FDFF200A3976C /* WebKit.framework in Frameworks */,
 				BFFD7C40223AA94800AB761D /* Kanna.framework in Frameworks */,
 				BFFD7C3A223AA0DA00AB761D /* Alamofire.framework in Frameworks */,
 				BFFD7C2D223A9EBE00AB761D /* RxAtomic.framework in Frameworks */,
@@ -166,6 +171,7 @@
 		BFFD7C29223A9EBE00AB761D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BFF669E9223FDFF200A3976C /* WebKit.framework */,
 				BFCE40A3223BF98700935AF4 /* Nimble.framework */,
 				BFCE40A4223BF98700935AF4 /* Quick.framework */,
 				BFFD7C3F223AA94800AB761D /* Kanna.framework */,
@@ -187,6 +193,7 @@
 				BF20A116223C0BE900CC4275 /* TrendHeaderView.xib */,
 				BF20A118223CA61500CC4275 /* SearchViewController.swift */,
 				BF20A119223CA61500CC4275 /* SearchViewController.xib */,
+				BFF669E7223FDFD400A3976C /* WebViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -221,8 +228,8 @@
 		BFFD7C41223BC7FF00AB761D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				BF20A147223DE5B700CC4275 /* QiitaArticleCell.xib */,
 				BFFD7C42223BC84C00AB761D /* QiitaArticleCell.swift */,
-				BFFD7C43223BC84C00AB761D /* QiitaArticleCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -319,8 +326,8 @@
 			files = (
 				BF20A11B223CA61500CC4275 /* SearchViewController.xib in Resources */,
 				BFFD7C38223AA05A00AB761D /* TrendsViewController.xib in Resources */,
-				BFFD7C45223BC84C00AB761D /* QiitaArticleCell.xib in Resources */,
 				BFFD7C22223A9C7A00AB761D /* LaunchScreen.storyboard in Resources */,
+				BF20A148223DE5B700CC4275 /* QiitaArticleCell.xib in Resources */,
 				BFFD7C1F223A9C7A00AB761D /* Assets.xcassets in Resources */,
 				BF20A117223C0BE900CC4275 /* TrendHeaderView.xib in Resources */,
 				BF20A11D223CA7E800CC4275 /* Settings.bundle in Resources */,
@@ -374,6 +381,7 @@
 				BFFD7C37223AA05A00AB761D /* TrendsViewController.swift in Sources */,
 				BF20A121223CB61700CC4275 /* QiitaAPIModels.swift in Sources */,
 				BFFD7C3C223AA22100AB761D /* QiitaAPIGateway.swift in Sources */,
+				BFF669E8223FDFD400A3976C /* WebViewController.swift in Sources */,
 				BF20A11F223CAFDC00CC4275 /* SearchViewModel.swift in Sources */,
 				BFFD7C47223BD22D00AB761D /* TrendViewModel.swift in Sources */,
 				BFFD7C18223A9C7200AB761D /* AppDelegate.swift in Sources */,

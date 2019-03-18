@@ -56,7 +56,7 @@ struct Trend: Decodable {
             let createdAt: Date
             let likesCount: Int
             let title: String
-            let uuid: String
+            let uuid: String // QiitaAPIのitem_idと連動してるみたい.
             let author: ArticleAuthor
             
             struct ArticleAuthor: Codable {

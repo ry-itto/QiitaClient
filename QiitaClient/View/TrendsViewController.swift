@@ -22,6 +22,13 @@ final class TrendsViewController: UIViewController {
         }
     }
     let viewModel: TrendViewModel = TrendViewModel()
+    
+    static func instantiateWithTabBarItem() -> UINavigationController {
+        let viewController = UINavigationController(rootViewController: TrendsViewController())
+        viewController.title = "トレンド"
+        viewController.tabBarItem.image = UIImage(named: "rising")
+        return viewController
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +40,11 @@ final class TrendsViewController: UIViewController {
         viewModel.articles
             .bind(to: tableView.rx.items(cellIdentifier: QiitaArticleCell.cellIdentifier, cellType: QiitaArticleCell.self)) { row, article, cell in
                 cell.configure(model: article)
-        }.disposed(by: disposeBag)
+            }.disposed(by: disposeBag)
+        
+        tableView.rx.modelSelected(Trend.TrendArticle.self)
+            .subscribe(onNext: { [weak self] article in
+                self?.navigationController?.pushViewController(WebViewController(url: article), animated: true)
+            }).disposed(by: disposeBag)
     }
 }

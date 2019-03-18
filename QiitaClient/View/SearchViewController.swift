@@ -27,7 +27,14 @@ class SearchViewController: UIViewController {
             tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         }
     }
-
+    
+    static func instantiateWithTabBarItem() -> UINavigationController {
+        let viewController = UINavigationController(rootViewController: SearchViewController())
+        viewController.title = "検索"
+        viewController.tabBarItem.image = UIImage(named: "search")
+        return viewController
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         bindViewModel()
