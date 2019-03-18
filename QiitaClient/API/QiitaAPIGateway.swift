@@ -11,10 +11,9 @@ import Alamofire
 
 final class QiitaAPIGateway {
     
-    fileprivate static let host = URL(string: "https://qiita.com")
+    fileprivate let host = URL(string: "https://qiita.com")
     
     let accessToken: String
-    private static var decoder: JSONDecoder = JSONDecoder()
     
     init() {
         accessToken = UserDefaults.init().string(forKey: "qiita_access_token")!
@@ -30,9 +29,10 @@ final class QiitaAPIGateway {
     ///     - after: APIリクエスト後の処理
     ///     - response: APIリクエスト結果, エラー時nil
     ///     - error: エラー内容, エラー時以外nil
-    static func fetchArticles(page: Int = 1, perPage: Int = 20, query: String, after: @escaping (_ response: [QiitaAPI.Article], _ error: QiitaAPI.APIError?) -> Void) {
+    func fetchArticles(page: Int = 1, perPage: Int = 20, query: String, after: @escaping (_ response: [QiitaAPI.Article], _ error: QiitaAPI.APIError?) -> Void) {
         let path = "/api/v2/items?page=\(page)&perPage=\(perPage)&query=\(query)"
         guard let requestURL = URL(string: path, relativeTo: host) else { return }
+        let decoder: JSONDecoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         decoder.dateDecodingStrategy = .iso8601
         
@@ -54,9 +54,10 @@ final class QiitaAPIGateway {
     ///     - response: APIリクエスト結果 エラー時nil
     ///     - error: エラー内容　エラー時以外nil
     ///
-    static func fetchTagList(after: @escaping (_ response: [QiitaAPI.TagInfo], _ error: QiitaAPI.APIError?) -> Void) {
+    func fetchTagList(after: @escaping (_ response: [QiitaAPI.TagInfo], _ error: QiitaAPI.APIError?) -> Void) {
         let path = "/api/v2/tags?sort=count"
         guard let requestURL = URL(string: path, relativeTo: host) else { return }
+        let decoder: JSONDecoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         
         Alamofire.request(requestURL).responseJSON { response in
