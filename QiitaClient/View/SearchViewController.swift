@@ -24,7 +24,7 @@ class SearchViewController: UIViewController {
     }
     @IBOutlet weak var tableView: UITableView! {
         didSet {
-            tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+            tableView.register(UINib(nibName: "QiitaArticleCell", bundle: nil), forCellReuseIdentifier: QiitaArticleCell.cellIdentifier)
         }
     }
     
@@ -53,8 +53,8 @@ class SearchViewController: UIViewController {
     fileprivate func bindViewModel() {
         
         viewModel.searchResult
-            .bind(to: tableView.rx.items(cellIdentifier: "cell")) { row, article, cell in
-                cell.textLabel?.text = article.title
+            .bind(to: tableView.rx.items(cellIdentifier: QiitaArticleCell.cellIdentifier, cellType: QiitaArticleCell.self)) { row, article, cell in
+                cell.configure(model: article)
             }.disposed(by: disposeBag)
     }
 }
