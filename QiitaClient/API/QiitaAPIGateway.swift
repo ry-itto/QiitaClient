@@ -59,5 +59,22 @@ final class QiitaAPIGateway {
         
         return Alamofire.request(requestURL!)
     }
+    
+    /// QiitaAPI v2 タグ一覧取得
+    /// https://qiita.com/api/v2/docs#get-apiv2tags
+    ///
+    /// - Parameters:
+    ///     - page: 何ページ分か, default=1
+    ///     - perPage: 1ページごとの記事数, default=20
+    ///     - after: APIリクエスト後の処理
+    ///     - response: APIリクエスト結果 エラー時nil
+    ///     - error: エラー内容　エラー時以外nil
+    ///
+    func fetchTagList(page: Int = 1, perPage: Int = 20) -> DataRequest {
+        let path = "/api/v2/tags?sort=count&page=\(page)&perPage=\(perPage)"
+        let requestURL = URL(string: path, relativeTo: host)
+        
+        return Alamofire.request(requestURL!)
+    }
 }
 
