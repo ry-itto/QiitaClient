@@ -19,7 +19,7 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar! {
         didSet {
-            searchBar.placeholder = "Search Repositries..."
+            searchBar.placeholder = "Search"
         }
     }
     @IBOutlet weak var tableView: UITableView! {
@@ -59,6 +59,4 @@ class SearchViewController: UIViewController {
     }
 }
 
-extension SearchViewController: UISearchBarDelegate {
-    
-}
+extension SearchViewController: UISearchBarDelegate {}
