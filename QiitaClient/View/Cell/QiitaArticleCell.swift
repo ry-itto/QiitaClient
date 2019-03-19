@@ -11,6 +11,7 @@ import UIKit
 class QiitaArticleCell: UITableViewCell {
     
     static let cellIdentifier = String(describing: type(of: self))
+    static let rowHeight = CGFloat(92)
     
     @IBOutlet var thumbnailImage: UIImageView!
     @IBOutlet var title: UILabel! {
@@ -35,22 +36,16 @@ class QiitaArticleCell: UITableViewCell {
     }
     
     func configure(model: Trend.TrendArticle) {
-        self.thumbnailImage.image = fetchImageFromURL(url: model.node.author.profileImageUrl)
+        self.thumbnailImage.setImageFrom(url: model.node.author.profileImageUrl, placeholder: UIImage(named: "people"))
         self.title.text = model.node.title
         self.userName.text = model.node.author.urlName
         self.goodCount.text = "\(model.node.likesCount)"
     }
     
     func configure(model: QiitaAPI.Article) {
-        self.thumbnailImage.image = fetchImageFromURL(url: model.user.profileImageUrl!)
+        self.thumbnailImage.setImageFrom(url: model.user.profileImageUrl, placeholder: UIImage(named: "people"))
         self.title.text = model.title
-        self.userName.text = model.user.name
-        self.goodCount.text = "\(model.likesCount)"
-    }
-    
-    fileprivate func fetchImageFromURL(url: URL) -> UIImage? {
-        guard let data = try? Data(contentsOf: url) else { return nil }
-        
-        return UIImage(data: data)
+        self.userName.text = "by \(model.user.id)"
+        self.goodCount.text = "いいね: \(model.likesCount)"
     }
 }

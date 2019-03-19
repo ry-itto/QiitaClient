@@ -25,6 +25,9 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.register(UINib(nibName: "QiitaArticleCell", bundle: nil), forCellReuseIdentifier: QiitaArticleCell.cellIdentifier)
+            tableView.rowHeight = QiitaArticleCell.rowHeight
+            tableView.estimatedRowHeight = UITableView.automaticDimension
+            tableView.tableFooterView = UIView()
         }
     }
     

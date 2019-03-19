@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BF1401592241407A004F4DAF /* TagListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1401582241407A004F4DAF /* TagListDataProvider.swift */; };
+		BF14015C2241432F004F4DAF /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF14015B2241432F004F4DAF /* UIImageViewExtension.swift */; };
+		BF14015E22414522004F4DAF /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF14015D22414522004F4DAF /* Kingfisher.framework */; };
 		BF20A108223BF9F700CC4275 /* QiitaClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20A107223BF9F700CC4275 /* QiitaClientTests.swift */; };
 		BF20A10F223BFB4300CC4275 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCE40A3223BF98700935AF4 /* Nimble.framework */; };
 		BF20A110223BFB4300CC4275 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCE40A4223BF98700935AF4 /* Quick.framework */; };
@@ -66,6 +68,8 @@
 
 /* Begin PBXFileReference section */
 		BF1401582241407A004F4DAF /* TagListDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListDataProvider.swift; sourceTree = "<group>"; };
+		BF14015B2241432F004F4DAF /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		BF14015D22414522004F4DAF /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		BF20A105223BF9F600CC4275 /* QiitaClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QiitaClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF20A107223BF9F700CC4275 /* QiitaClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaClientTests.swift; sourceTree = "<group>"; };
 		BF20A109223BF9F700CC4275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF14015E22414522004F4DAF /* Kingfisher.framework in Frameworks */,
 				BFF669EA223FDFF200A3976C /* WebKit.framework in Frameworks */,
 				BFFD7C40223AA94800AB761D /* Kanna.framework in Frameworks */,
 				BFFD7C3A223AA0DA00AB761D /* Alamofire.framework in Frameworks */,
@@ -126,6 +131,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF14015A224142FE004F4DAF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BF14015B2241432F004F4DAF /* UIImageViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		BF20A106223BF9F700CC4275 /* QiitaClientTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,13 +172,14 @@
 			isa = PBXGroup;
 			children = (
 				BFFD7C33223A9FFB00AB761D /* API */,
-				BFFD7C34223AA00A00AB761D /* Model */,
-				BFFD7C32223A9FF400AB761D /* ViewModel */,
-				BFFD7C31223A9FED00AB761D /* View */,
 				BFFD7C17223A9C7200AB761D /* AppDelegate.swift */,
 				BFFD7C1E223A9C7A00AB761D /* Assets.xcassets */,
-				BFFD7C20223A9C7A00AB761D /* LaunchScreen.storyboard */,
+				BF14015A224142FE004F4DAF /* Extensions */,
 				BFFD7C23223A9C7A00AB761D /* Info.plist */,
+				BFFD7C20223A9C7A00AB761D /* LaunchScreen.storyboard */,
+				BFFD7C34223AA00A00AB761D /* Model */,
+				BFFD7C31223A9FED00AB761D /* View */,
+				BFFD7C32223A9FF400AB761D /* ViewModel */,
 			);
 			path = QiitaClient;
 			sourceTree = "<group>";
@@ -173,6 +187,7 @@
 		BFFD7C29223A9EBE00AB761D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF14015D22414522004F4DAF /* Kingfisher.framework */,
 				BFF669E9223FDFF200A3976C /* WebKit.framework */,
 				BFCE40A3223BF98700935AF4 /* Nimble.framework */,
 				BFCE40A4223BF98700935AF4 /* Quick.framework */,
@@ -353,6 +368,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxAtomic.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kanna.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -385,6 +401,7 @@
 				BF20A121223CB61700CC4275 /* QiitaAPIModels.swift in Sources */,
 				BFFD7C3C223AA22100AB761D /* QiitaAPIGateway.swift in Sources */,
 				BFF669E8223FDFD400A3976C /* WebViewController.swift in Sources */,
+				BF14015C2241432F004F4DAF /* UIImageViewExtension.swift in Sources */,
 				BF20A11F223CAFDC00CC4275 /* SearchViewModel.swift in Sources */,
 				BFFD7C47223BD22D00AB761D /* TrendViewModel.swift in Sources */,
 				BFFD7C18223A9C7200AB761D /* AppDelegate.swift in Sources */,

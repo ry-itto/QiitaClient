@@ -1,5 +1,6 @@
 github "ReactiveX/RxSwift"
 github "Alamofire/Alamofire"
 github "tid-kijyun/Kanna"
+github "onevcat/Kingfisher"
 github "Quick/Quick"
 github "Quick/Nimble"
