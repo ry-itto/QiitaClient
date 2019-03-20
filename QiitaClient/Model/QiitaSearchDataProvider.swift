@@ -12,18 +12,18 @@ import RxCocoa
 
 protocol QiitaSearchDataProviderProtocol {
     func fetchArticle(itemId: String) -> Observable<QiitaAPI.Article>
-    func fetchArticles(query: String) -> Observable<[QiitaAPI.Article]>
+    func fetchArticles(page: Int, query: String) -> Observable<[QiitaAPI.Article]>
 }
 
 class QiitaSearchDataProvider: QiitaSearchDataProviderProtocol {
     
-    func fetchArticles(query: String) -> Observable<[QiitaAPI.Article]> {
+    func fetchArticles(page: Int, query: String) -> Observable<[QiitaAPI.Article]> {
         
         let gateway = QiitaAPIGateway.shared
         let decoder = gateway.decoder
         
         return Observable.create { observer -> Disposable in
-            let request = gateway.fetchArticles(query: query)
+            let request = gateway.fetchArticles(page: page, query: query)
             
             request.responseJSON { response in
                 do {

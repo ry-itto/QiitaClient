@@ -13,19 +13,64 @@ import RxCocoa
 class SearchViewModel {
     private let disposeBag = DisposeBag()
     
-    let searchResult: Observable<[QiitaAPI.Article]>
+    typealias Input = (
+        search: Observable<String>,
+        selectedTags: Observable<[String]>
+    )
     
-    init(_ provider: QiitaSearchDataProviderProtocol = QiitaSearchDataProvider(), search: Observable<String>) {
+    let searchResult: Observable<[QiitaAPI.Article]>
+    let searchWithTag: Observable<[QiitaAPI.Article]>
+    
+    let addArticles: AnyObserver<String>
+    
+    
+    init(_ provider: QiitaSearchDataProviderProtocol = QiitaSearchDataProvider(),
+         input: Input) {
         let searchResultRelay = BehaviorRelay<[QiitaAPI.Article]>(value: [])
+        let searchWithTagRelay = BehaviorRelay<[QiitaAPI.Article]>(value: [])
+        let selectedTags = BehaviorRelay<[String]>(value: [])
+        let addArticlesSubject = PublishSubject<String>()
         
+        var page = 1
+        
+        addArticles = addArticlesSubject.asObserver()
         searchResult = searchResultRelay.asObservable()
+        searchWithTag = searchWithTagRelay.asObservable()
         
-        search
+        input.selectedTags
+            .bind(to: selectedTags)
+            .disposed(by: disposeBag)
+        
+        selectedTags
+            .subscribe(onNext: { tagNames in
+                let filteredResult = searchResultRelay.value.filter { article -> Bool in
+                    var isContain = false
+                    article.tags.forEach { tag in
+                        if tagNames.contains(tag.name) {
+                            isContain = true
+                        }
+                    }
+                    return isContain
+                }
+                searchResultRelay.accept(filteredResult)
+            }).disposed(by: disposeBag)
+        
+        input.search
             .distinctUntilChanged()
             .debounce(0.3, scheduler: ConcurrentMainScheduler.instance)
-            .flatMap { query in provider.fetchArticles(query: query)}
+            .flatMap { query -> Observable<[QiitaAPI.Article]> in
+                page = 2
+                return provider.fetchArticles(page: 1, query: query)
+            }
             .asDriver(onErrorJustReturn: [])
             .drive(searchResultRelay)
             .disposed(by: disposeBag)
+        
+        addArticlesSubject.asObservable()
+            .flatMap { query in provider.fetchArticles(page: page, query: query) }
+            .subscribe(onNext: { articles in
+                page += 1
+                searchResultRelay.accept(searchResultRelay.value + articles)
+            }).disposed(by: disposeBag)
     }
 }

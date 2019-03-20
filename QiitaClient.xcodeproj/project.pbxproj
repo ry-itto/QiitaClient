@@ -10,6 +10,13 @@
 		BF1401592241407A004F4DAF /* TagListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1401582241407A004F4DAF /* TagListDataProvider.swift */; };
 		BF14015C2241432F004F4DAF /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF14015B2241432F004F4DAF /* UIImageViewExtension.swift */; };
 		BF14015E22414522004F4DAF /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF14015D22414522004F4DAF /* Kingfisher.framework */; };
+		BF140161224279EB004F4DAF /* TagListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF14015F224279EB004F4DAF /* TagListViewController.swift */; };
+		BF140162224279EB004F4DAF /* TagListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF140160224279EB004F4DAF /* TagListViewController.xib */; };
+		BF14016522427A12004F4DAF /* QiitaTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF14016322427A12004F4DAF /* QiitaTagCell.swift */; };
+		BF14016622427A12004F4DAF /* QiitaTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF14016422427A12004F4DAF /* QiitaTagCell.xib */; };
+		BF14016822427B9C004F4DAF /* ModalEventWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF14016722427B9C004F4DAF /* ModalEventWrapper.swift */; };
+		BF14016A22427BD2004F4DAF /* TagListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF14016922427BD2004F4DAF /* TagListViewModel.swift */; };
+		BF14016C22427C18004F4DAF /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF14016B22427C18004F4DAF /* UIScrollViewExtension.swift */; };
 		BF20A108223BF9F700CC4275 /* QiitaClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20A107223BF9F700CC4275 /* QiitaClientTests.swift */; };
 		BF20A10F223BFB4300CC4275 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCE40A3223BF98700935AF4 /* Nimble.framework */; };
 		BF20A110223BFB4300CC4275 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCE40A4223BF98700935AF4 /* Quick.framework */; };
@@ -70,6 +77,13 @@
 		BF1401582241407A004F4DAF /* TagListDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListDataProvider.swift; sourceTree = "<group>"; };
 		BF14015B2241432F004F4DAF /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		BF14015D22414522004F4DAF /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		BF14015F224279EB004F4DAF /* TagListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListViewController.swift; sourceTree = "<group>"; };
+		BF140160224279EB004F4DAF /* TagListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagListViewController.xib; sourceTree = "<group>"; };
+		BF14016322427A12004F4DAF /* QiitaTagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaTagCell.swift; sourceTree = "<group>"; };
+		BF14016422427A12004F4DAF /* QiitaTagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QiitaTagCell.xib; sourceTree = "<group>"; };
+		BF14016722427B9C004F4DAF /* ModalEventWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalEventWrapper.swift; sourceTree = "<group>"; };
+		BF14016922427BD2004F4DAF /* TagListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListViewModel.swift; sourceTree = "<group>"; };
+		BF14016B22427C18004F4DAF /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
 		BF20A105223BF9F600CC4275 /* QiitaClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QiitaClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF20A107223BF9F700CC4275 /* QiitaClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaClientTests.swift; sourceTree = "<group>"; };
 		BF20A109223BF9F700CC4275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -135,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				BF14015B2241432F004F4DAF /* UIImageViewExtension.swift */,
+				BF14016B22427C18004F4DAF /* UIScrollViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -206,6 +221,8 @@
 				BFFD7C41223BC7FF00AB761D /* Cell */,
 				BF20A118223CA61500CC4275 /* SearchViewController.swift */,
 				BF20A119223CA61500CC4275 /* SearchViewController.xib */,
+				BF14015F224279EB004F4DAF /* TagListViewController.swift */,
+				BF140160224279EB004F4DAF /* TagListViewController.xib */,
 				BF20A114223C0BBB00CC4275 /* TrendHeaderView.swift */,
 				BF20A116223C0BE900CC4275 /* TrendHeaderView.xib */,
 				BFFD7C35223AA05A00AB761D /* TrendsViewController.swift */,
@@ -220,6 +237,8 @@
 			children = (
 				BFFD7C46223BD22D00AB761D /* TrendViewModel.swift */,
 				BF20A11E223CAFDC00CC4275 /* SearchViewModel.swift */,
+				BF14016722427B9C004F4DAF /* ModalEventWrapper.swift */,
+				BF14016922427BD2004F4DAF /* TagListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -248,6 +267,8 @@
 			children = (
 				BFFD7C42223BC84C00AB761D /* QiitaArticleCell.swift */,
 				BF20A147223DE5B700CC4275 /* QiitaArticleCell.xib */,
+				BF14016322427A12004F4DAF /* QiitaTagCell.swift */,
+				BF14016422427A12004F4DAF /* QiitaTagCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -343,9 +364,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF20A11B223CA61500CC4275 /* SearchViewController.xib in Resources */,
+				BF140162224279EB004F4DAF /* TagListViewController.xib in Resources */,
 				BFFD7C38223AA05A00AB761D /* TrendsViewController.xib in Resources */,
 				BFFD7C22223A9C7A00AB761D /* LaunchScreen.storyboard in Resources */,
 				BF20A148223DE5B700CC4275 /* QiitaArticleCell.xib in Resources */,
+				BF14016622427A12004F4DAF /* QiitaTagCell.xib in Resources */,
 				BFFD7C1F223A9C7A00AB761D /* Assets.xcassets in Resources */,
 				BF20A117223C0BE900CC4275 /* TrendHeaderView.xib in Resources */,
 				BF20A11D223CA7E800CC4275 /* Settings.bundle in Resources */,
@@ -394,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF20A11A223CA61500CC4275 /* SearchViewController.swift in Sources */,
+				BF14016522427A12004F4DAF /* QiitaTagCell.swift in Sources */,
 				BFFD7C44223BC84C00AB761D /* QiitaArticleCell.swift in Sources */,
 				BFFD7C3E223AA6C100AB761D /* QiitaTrendDataProvider.swift in Sources */,
 				BF20A115223C0BBB00CC4275 /* TrendHeaderView.swift in Sources */,
@@ -404,9 +428,13 @@
 				BF14015C2241432F004F4DAF /* UIImageViewExtension.swift in Sources */,
 				BF20A11F223CAFDC00CC4275 /* SearchViewModel.swift in Sources */,
 				BFFD7C47223BD22D00AB761D /* TrendViewModel.swift in Sources */,
+				BF14016C22427C18004F4DAF /* UIScrollViewExtension.swift in Sources */,
 				BFFD7C18223A9C7200AB761D /* AppDelegate.swift in Sources */,
+				BF140161224279EB004F4DAF /* TagListViewController.swift in Sources */,
+				BF14016822427B9C004F4DAF /* ModalEventWrapper.swift in Sources */,
 				BF20A123223CC1F400CC4275 /* QiitaSearchDataProvider.swift in Sources */,
 				BF1401592241407A004F4DAF /* TagListDataProvider.swift in Sources */,
+				BF14016A22427BD2004F4DAF /* TagListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

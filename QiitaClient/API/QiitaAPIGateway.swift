@@ -35,9 +35,6 @@ final class QiitaAPIGateway {
     ///     - page: 何ページ分か, default=1
     ///     - perPage: 1ページごとの記事数, default=20
     ///     - query: 検索クエリ, 必須
-    ///     - after: APIリクエスト後の処理
-    ///     - response: APIリクエスト結果, エラー時nil
-    ///     - error: エラー内容, エラー時以外nil
     func fetchArticles(page: Int = 1, perPage: Int = 20, query: String) -> DataRequest {
         let path = "/api/v2/items?page=\(page)&perPage=\(perPage)&query=\(query)"
         let requestURL = URL(string: path, relativeTo: host)
@@ -66,9 +63,6 @@ final class QiitaAPIGateway {
     /// - Parameters:
     ///     - page: 何ページ分か, default=1
     ///     - perPage: 1ページごとの記事数, default=20
-    ///     - after: APIリクエスト後の処理
-    ///     - response: APIリクエスト結果 エラー時nil
-    ///     - error: エラー内容　エラー時以外nil
     ///
     func fetchTagList(page: Int = 1, perPage: Int = 20) -> DataRequest {
         let path = "/api/v2/tags?sort=count&page=\(page)&perPage=\(perPage)"

@@ -10,26 +10,35 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, UISearchBarDelegate {
     
     private let disposeBag = DisposeBag()
-    lazy var viewModel = {
-        return SearchViewModel(search: searchBar.rx.text.orEmpty.asObservable())
+    lazy var viewModel: SearchViewModel = {
+        let input = SearchViewModel.Input(
+            search: self.searchBar.rx.text.orEmpty.asObservable(),
+            selectedTags: self._selectedTags.asObservable()
+        )
+        return SearchViewModel(input: input)
     }()
+    
+    private let _selectedTags = PublishRelay<[String]>()
     
     @IBOutlet weak var searchBar: UISearchBar! {
         didSet {
             searchBar.placeholder = "Search"
         }
     }
+    
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.register(UINib(nibName: "QiitaArticleCell", bundle: nil), forCellReuseIdentifier: QiitaArticleCell.cellIdentifier)
-            tableView.rowHeight = QiitaArticleCell.rowHeight
-            tableView.estimatedRowHeight = UITableView.automaticDimension
+            tableView.estimatedRowHeight = QiitaArticleCell.rowHeight
+            tableView.rowHeight = UITableView.automaticDimension
             tableView.tableFooterView = UIView()
         }
     }
+    
+    @IBOutlet weak var filterButton: UIButton!
     
     static func instantiateWithTabBarItem() -> UINavigationController {
         let viewController = UINavigationController(rootViewController: SearchViewController())
@@ -55,11 +64,45 @@ class SearchViewController: UIViewController {
     
     fileprivate func bindViewModel() {
         
+        let modalEvent = ModalEventWrapper.instance
+
         viewModel.searchResult
             .bind(to: tableView.rx.items(cellIdentifier: QiitaArticleCell.cellIdentifier, cellType: QiitaArticleCell.self)) { row, article, cell in
                 cell.configure(model: article)
             }.disposed(by: disposeBag)
+        
+        tableView.rx.didScroll.asObservable()
+            .debounce(0.5, scheduler: ConcurrentMainScheduler.instance)
+            .bind(to: Binder(self) { me, _ in
+                if me.tableView.isNearBottomEdge(edgeOffset: 500) {
+                    me.viewModel.addArticles.onNext(me.searchBar.text!)
+                }
+            }).disposed(by: disposeBag)
+        
+        
+        tableView.rx.modelSelected(QiitaAPI.Article.self)
+            .subscribe(onNext: { [weak self] article in
+                self?.navigationController?.pushViewController(WebViewController(url: article.url), animated: true)
+            }).disposed(by: disposeBag)
+        
+        filterButton.rx.tap.asObservable()
+            .bind(to: Binder(self) { me, _ in
+                
+                let tagListVC = TagListViewController()
+                /// skipを入れないと一回selectedTagsのsubscribeが走ってしまい, modelが空になってしまうためskip1回を入れている.
+                tagListVC.selectedTags
+                    .skip(1)
+                    .concat(Observable.never())
+                    .bind(to: me._selectedTags)
+                    .disposed(by: tagListVC.disposeBag)
+                
+                me.present(tagListVC, animated: true, completion: nil)
+            })
+            .disposed(by: disposeBag)
+        
+        modalEvent.modalClose
+            .subscribe(onNext: { vc in
+                vc.dismiss(animated: true, completion: nil)
+            }).disposed(by: disposeBag)
     }
 }
-
-extension SearchViewController: UISearchBarDelegate {}
