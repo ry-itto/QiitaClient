@@ -60,6 +60,11 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
+        if UserDefaults.standard.string(forKey: "qiita_access_token")?.isEmpty ?? true {
+            present(LoginViewController.shared, animated: true, completion: nil)
+        } else {
+            print(UserDefaults.standard.string(forKey: "qiita_access_token"))
+        }
     }
     
     fileprivate func bindViewModel() {
@@ -100,7 +105,12 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
             })
             .disposed(by: disposeBag)
         
-        modalEvent.modalClose
+        modalEvent.tagModalClose
+            .subscribe(onNext: { vc in
+                vc.dismiss(animated: true, completion: nil)
+            }).disposed(by: disposeBag)
+        
+        modalEvent.loginModalClose
             .subscribe(onNext: { vc in
                 vc.dismiss(animated: true, completion: nil)
             }).disposed(by: disposeBag)

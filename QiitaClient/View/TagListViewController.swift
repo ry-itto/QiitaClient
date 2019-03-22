@@ -69,7 +69,7 @@ class TagListViewController: UIViewController {
             filterButton.rx.tap.asObservable().map { me }
             ])
         modalClose
-            .bind(to: modalEvent.modalClose)
+            .bind(to: modalEvent.tagModalClose)
             .disposed(by: disposeBag)
     }
 }

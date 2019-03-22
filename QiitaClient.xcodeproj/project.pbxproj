@@ -17,16 +17,18 @@
 		BF14016822427B9C004F4DAF /* ModalEventWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF14016722427B9C004F4DAF /* ModalEventWrapper.swift */; };
 		BF14016A22427BD2004F4DAF /* TagListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF14016922427BD2004F4DAF /* TagListViewModel.swift */; };
 		BF14016C22427C18004F4DAF /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF14016B22427C18004F4DAF /* UIScrollViewExtension.swift */; };
+		BF1401712243C148004F4DAF /* QiitaAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1401702243C148004F4DAF /* QiitaAccountService.swift */; };
+		BF1401782243DC85004F4DAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1401762243DC85004F4DAF /* LoginViewController.swift */; };
+		BF1401792243DC85004F4DAF /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF1401772243DC85004F4DAF /* LoginViewController.xib */; };
+		BF14019D22453313004F4DAF /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF14019C22453313004F4DAF /* Config.plist */; };
+		BF14019F22453482004F4DAF /* QiitaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF14019E22453482004F4DAF /* QiitaConfig.swift */; };
 		BF20A108223BF9F700CC4275 /* QiitaClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20A107223BF9F700CC4275 /* QiitaClientTests.swift */; };
 		BF20A10F223BFB4300CC4275 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCE40A3223BF98700935AF4 /* Nimble.framework */; };
 		BF20A110223BFB4300CC4275 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCE40A4223BF98700935AF4 /* Quick.framework */; };
 		BF20A112223BFB7300CC4275 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BFCE40A3223BF98700935AF4 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF20A113223BFB7300CC4275 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BFCE40A4223BF98700935AF4 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BF20A115223C0BBB00CC4275 /* TrendHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20A114223C0BBB00CC4275 /* TrendHeaderView.swift */; };
-		BF20A117223C0BE900CC4275 /* TrendHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF20A116223C0BE900CC4275 /* TrendHeaderView.xib */; };
 		BF20A11A223CA61500CC4275 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20A118223CA61500CC4275 /* SearchViewController.swift */; };
 		BF20A11B223CA61500CC4275 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF20A119223CA61500CC4275 /* SearchViewController.xib */; };
-		BF20A11D223CA7E800CC4275 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BF20A11C223CA7E800CC4275 /* Settings.bundle */; };
 		BF20A11F223CAFDC00CC4275 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20A11E223CAFDC00CC4275 /* SearchViewModel.swift */; };
 		BF20A121223CB61700CC4275 /* QiitaAPIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20A120223CB61700CC4275 /* QiitaAPIModels.swift */; };
 		BF20A123223CC1F400CC4275 /* QiitaSearchDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20A122223CC1F400CC4275 /* QiitaSearchDataProvider.swift */; };
@@ -84,14 +86,16 @@
 		BF14016722427B9C004F4DAF /* ModalEventWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalEventWrapper.swift; sourceTree = "<group>"; };
 		BF14016922427BD2004F4DAF /* TagListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListViewModel.swift; sourceTree = "<group>"; };
 		BF14016B22427C18004F4DAF /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
+		BF1401702243C148004F4DAF /* QiitaAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAccountService.swift; sourceTree = "<group>"; };
+		BF1401762243DC85004F4DAF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BF1401772243DC85004F4DAF /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		BF14019C22453313004F4DAF /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		BF14019E22453482004F4DAF /* QiitaConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaConfig.swift; sourceTree = "<group>"; };
 		BF20A105223BF9F600CC4275 /* QiitaClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QiitaClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF20A107223BF9F700CC4275 /* QiitaClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaClientTests.swift; sourceTree = "<group>"; };
 		BF20A109223BF9F700CC4275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF20A114223C0BBB00CC4275 /* TrendHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendHeaderView.swift; sourceTree = "<group>"; };
-		BF20A116223C0BE900CC4275 /* TrendHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendHeaderView.xib; sourceTree = "<group>"; };
 		BF20A118223CA61500CC4275 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		BF20A119223CA61500CC4275 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
-		BF20A11C223CA7E800CC4275 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		BF20A11E223CAFDC00CC4275 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		BF20A120223CB61700CC4275 /* QiitaAPIModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAPIModels.swift; sourceTree = "<group>"; };
 		BF20A122223CC1F400CC4275 /* QiitaSearchDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaSearchDataProvider.swift; sourceTree = "<group>"; };
@@ -157,8 +161,8 @@
 		BF20A106223BF9F700CC4275 /* QiitaClientTests */ = {
 			isa = PBXGroup;
 			children = (
-				BF20A107223BF9F700CC4275 /* QiitaClientTests.swift */,
 				BF20A109223BF9F700CC4275 /* Info.plist */,
+				BF20A107223BF9F700CC4275 /* QiitaClientTests.swift */,
 			);
 			path = QiitaClientTests;
 			sourceTree = "<group>";
@@ -166,7 +170,6 @@
 		BFFD7C0B223A9C7200AB761D = {
 			isa = PBXGroup;
 			children = (
-				BF20A11C223CA7E800CC4275 /* Settings.bundle */,
 				BFFD7C16223A9C7200AB761D /* QiitaClient */,
 				BF20A106223BF9F700CC4275 /* QiitaClientTests */,
 				BFFD7C15223A9C7200AB761D /* Products */,
@@ -189,12 +192,14 @@
 				BFFD7C33223A9FFB00AB761D /* API */,
 				BFFD7C17223A9C7200AB761D /* AppDelegate.swift */,
 				BFFD7C1E223A9C7A00AB761D /* Assets.xcassets */,
+				BF14019C22453313004F4DAF /* Config.plist */,
 				BF14015A224142FE004F4DAF /* Extensions */,
 				BFFD7C23223A9C7A00AB761D /* Info.plist */,
 				BFFD7C20223A9C7A00AB761D /* LaunchScreen.storyboard */,
 				BFFD7C34223AA00A00AB761D /* Model */,
 				BFFD7C31223A9FED00AB761D /* View */,
 				BFFD7C32223A9FF400AB761D /* ViewModel */,
+				BF14019E22453482004F4DAF /* QiitaConfig.swift */,
 			);
 			path = QiitaClient;
 			sourceTree = "<group>";
@@ -219,12 +224,12 @@
 			isa = PBXGroup;
 			children = (
 				BFFD7C41223BC7FF00AB761D /* Cell */,
+				BF1401762243DC85004F4DAF /* LoginViewController.swift */,
+				BF1401772243DC85004F4DAF /* LoginViewController.xib */,
 				BF20A118223CA61500CC4275 /* SearchViewController.swift */,
 				BF20A119223CA61500CC4275 /* SearchViewController.xib */,
 				BF14015F224279EB004F4DAF /* TagListViewController.swift */,
 				BF140160224279EB004F4DAF /* TagListViewController.xib */,
-				BF20A114223C0BBB00CC4275 /* TrendHeaderView.swift */,
-				BF20A116223C0BE900CC4275 /* TrendHeaderView.xib */,
 				BFFD7C35223AA05A00AB761D /* TrendsViewController.swift */,
 				BFFD7C36223AA05A00AB761D /* TrendsViewController.xib */,
 				BFF669E7223FDFD400A3976C /* WebViewController.swift */,
@@ -235,10 +240,10 @@
 		BFFD7C32223A9FF400AB761D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				BFFD7C46223BD22D00AB761D /* TrendViewModel.swift */,
-				BF20A11E223CAFDC00CC4275 /* SearchViewModel.swift */,
 				BF14016722427B9C004F4DAF /* ModalEventWrapper.swift */,
+				BF20A11E223CAFDC00CC4275 /* SearchViewModel.swift */,
 				BF14016922427BD2004F4DAF /* TagListViewModel.swift */,
+				BFFD7C46223BD22D00AB761D /* TrendViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -255,6 +260,7 @@
 		BFFD7C34223AA00A00AB761D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BF1401702243C148004F4DAF /* QiitaAccountService.swift */,
 				BF20A122223CC1F400CC4275 /* QiitaSearchDataProvider.swift */,
 				BFFD7C3D223AA6C100AB761D /* QiitaTrendDataProvider.swift */,
 				BF1401582241407A004F4DAF /* TagListDataProvider.swift */,
@@ -366,12 +372,12 @@
 				BF20A11B223CA61500CC4275 /* SearchViewController.xib in Resources */,
 				BF140162224279EB004F4DAF /* TagListViewController.xib in Resources */,
 				BFFD7C38223AA05A00AB761D /* TrendsViewController.xib in Resources */,
+				BF14019D22453313004F4DAF /* Config.plist in Resources */,
 				BFFD7C22223A9C7A00AB761D /* LaunchScreen.storyboard in Resources */,
 				BF20A148223DE5B700CC4275 /* QiitaArticleCell.xib in Resources */,
 				BF14016622427A12004F4DAF /* QiitaTagCell.xib in Resources */,
 				BFFD7C1F223A9C7A00AB761D /* Assets.xcassets in Resources */,
-				BF20A117223C0BE900CC4275 /* TrendHeaderView.xib in Resources */,
-				BF20A11D223CA7E800CC4275 /* Settings.bundle in Resources */,
+				BF1401792243DC85004F4DAF /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,13 +423,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF20A11A223CA61500CC4275 /* SearchViewController.swift in Sources */,
+				BF1401712243C148004F4DAF /* QiitaAccountService.swift in Sources */,
 				BF14016522427A12004F4DAF /* QiitaTagCell.swift in Sources */,
 				BFFD7C44223BC84C00AB761D /* QiitaArticleCell.swift in Sources */,
 				BFFD7C3E223AA6C100AB761D /* QiitaTrendDataProvider.swift in Sources */,
-				BF20A115223C0BBB00CC4275 /* TrendHeaderView.swift in Sources */,
 				BFFD7C37223AA05A00AB761D /* TrendsViewController.swift in Sources */,
 				BF20A121223CB61700CC4275 /* QiitaAPIModels.swift in Sources */,
 				BFFD7C3C223AA22100AB761D /* QiitaAPIGateway.swift in Sources */,
+				BF1401782243DC85004F4DAF /* LoginViewController.swift in Sources */,
 				BFF669E8223FDFD400A3976C /* WebViewController.swift in Sources */,
 				BF14015C2241432F004F4DAF /* UIImageViewExtension.swift in Sources */,
 				BF20A11F223CAFDC00CC4275 /* SearchViewModel.swift in Sources */,
@@ -432,6 +439,7 @@
 				BFFD7C18223A9C7200AB761D /* AppDelegate.swift in Sources */,
 				BF140161224279EB004F4DAF /* TagListViewController.swift in Sources */,
 				BF14016822427B9C004F4DAF /* ModalEventWrapper.swift in Sources */,
+				BF14019F22453482004F4DAF /* QiitaConfig.swift in Sources */,
 				BF20A123223CC1F400CC4275 /* QiitaSearchDataProvider.swift in Sources */,
 				BF1401592241407A004F4DAF /* TagListDataProvider.swift in Sources */,
 				BF14016A22427BD2004F4DAF /* TagListViewModel.swift in Sources */,

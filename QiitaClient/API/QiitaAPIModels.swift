@@ -122,6 +122,12 @@ struct QiitaAPI {
         let itemsCount: Int
     }
     
+    struct AccessToken: Decodable {
+        let clientId: String
+        let scopes: [String]
+        let token: String
+    }
+    
     enum APIError: Error {
         case decode
     }

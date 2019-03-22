@@ -9,9 +9,11 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import UIKit
 
 class ModalEventWrapper {
-    var modalClose = PublishRelay<TagListViewController>()
+    var tagModalClose = PublishRelay<TagListViewController>()
+    var loginModalClose = PublishRelay<LoginViewController>()
     
     static let instance = ModalEventWrapper()
     

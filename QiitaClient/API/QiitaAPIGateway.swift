@@ -11,7 +11,12 @@ import Alamofire
 
 final class QiitaAPIGateway {
     
+    fileprivate static let config = QiitaConfig.shared
+    
     fileprivate let host = URL(string: "https://qiita.com")
+    fileprivate let clientId = config.clientId
+    fileprivate let clientSecret = config.clientSecret
+    fileprivate let scope = "read_qiita write_qiita"
     
     let accessToken: String
     
@@ -27,6 +32,38 @@ final class QiitaAPIGateway {
     }
     
     static let shared = QiitaAPIGateway()
+    
+    /// QiitaAPI v2 認証認可URL
+    var authorizeURL: URL? {
+        var components = URLComponents(string: "https://qiita.com/api/v2/oauth/authorize")
+        components?.queryItems = [
+            URLQueryItem(name: "client_id", value: clientId),
+            URLQueryItem(name: "client_secret", value: clientSecret),
+            URLQueryItem(name: "scope", value: scope)
+        ]
+        
+        return components?.url
+    }
+    
+    /// QiitaAPI v2 アクセストークン取得
+    /// https://qiita.com/api/v2/docs#post-apiv2access_tokens
+    ///
+    func fetchAccessToken(code: String) -> DataRequest {
+        let path = "/api/v2/access_tokens"
+        let requestURL = URL(string: path, relativeTo: host)
+        let parameters = [
+            "client_id" : clientId,
+            "client_secret" : clientSecret,
+            "code" : code
+        ]
+        
+        let headers = [
+            "Content-Type" : "application/json"
+        ]
+        
+        /// MARK:- encodingを指定する必要があった.
+        return Alamofire.request(requestURL!, method: .post, parameters: parameters, encoding: JSONEncoding.default,  headers: headers)
+    }
     
     /// QiitaAPI v2 記事一覧検索
     /// https://qiita.com/api/v2/docs#get-apiv2items
