@@ -87,9 +87,6 @@ final class QiitaAPIGateway {
     func fetchArticle(itemId: String) -> DataRequest {
         let path = "/api/v2/items/\(itemId)"
         let requestURL = URL(string: path, relativeTo: host)
-        let decoder: JSONDecoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        decoder.dateDecodingStrategy = .iso8601
         
         return Alamofire.request(requestURL!)
     }
