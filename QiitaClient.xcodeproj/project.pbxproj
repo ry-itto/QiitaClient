@@ -197,9 +197,9 @@
 				BFFD7C23223A9C7A00AB761D /* Info.plist */,
 				BFFD7C20223A9C7A00AB761D /* LaunchScreen.storyboard */,
 				BFFD7C34223AA00A00AB761D /* Model */,
+				BF14019E22453482004F4DAF /* QiitaConfig.swift */,
 				BFFD7C31223A9FED00AB761D /* View */,
 				BFFD7C32223A9FF400AB761D /* ViewModel */,
-				BF14019E22453482004F4DAF /* QiitaConfig.swift */,
 			);
 			path = QiitaClient;
 			sourceTree = "<group>";
