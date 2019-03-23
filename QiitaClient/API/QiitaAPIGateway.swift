@@ -20,6 +20,10 @@ final class QiitaAPIGateway {
     
     let accessToken: String
     
+    lazy var headers = [
+        "Authorization" : "Bearer \(accessToken)"
+    ]
+    
     lazy var decoder: JSONDecoder = {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
@@ -76,7 +80,7 @@ final class QiitaAPIGateway {
         let path = "/api/v2/items?page=\(page)&perPage=\(perPage)&query=\(query)"
         let requestURL = URL(string: path, relativeTo: host)
         
-        return Alamofire.request(requestURL!)
+        return Alamofire.request(requestURL!, headers: headers)
     }
     
     /// QiitaAPI v2 記事一覧検索
@@ -88,7 +92,7 @@ final class QiitaAPIGateway {
         let path = "/api/v2/items/\(itemId)"
         let requestURL = URL(string: path, relativeTo: host)
         
-        return Alamofire.request(requestURL!)
+        return Alamofire.request(requestURL!, headers: headers)
     }
     
     /// QiitaAPI v2 タグ一覧取得
@@ -102,7 +106,7 @@ final class QiitaAPIGateway {
         let path = "/api/v2/tags?sort=count&page=\(page)&perPage=\(perPage)"
         let requestURL = URL(string: path, relativeTo: host)
         
-        return Alamofire.request(requestURL!)
+        return Alamofire.request(requestURL!, headers: headers)
     }
 }
 
