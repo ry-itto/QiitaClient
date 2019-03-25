@@ -77,13 +77,12 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
             }.disposed(by: disposeBag)
         
         tableView.rx.didScroll.asObservable()
-            .debounce(0.5, scheduler: ConcurrentMainScheduler.instance)
+            .debounce(0.2, scheduler: MainScheduler.instance)
             .bind(to: Binder(self) { me, _ in
                 if me.tableView.isNearBottomEdge(edgeOffset: 500) {
                     me.viewModel.addArticles.onNext(me.searchBar.text!)
                 }
             }).disposed(by: disposeBag)
-        
         
         tableView.rx.modelSelected(QiitaAPI.Article.self)
             .subscribe(onNext: { [weak self] article in
