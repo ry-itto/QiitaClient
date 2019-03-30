@@ -69,6 +69,24 @@ final class QiitaAPIGateway {
         return Alamofire.request(requestURL!, method: .post, parameters: parameters, encoding: JSONEncoding.default,  headers: headers)
     }
     
+    /// QiitaAPI v2 認証ユーザ取得
+    /// https://qiita.com/api/v2/docs#get-apiv2authenticated_user
+    func authenticatedUser() -> DataRequest {
+        let path = "/api/v2/authenticated_user"
+        let requestURL = URL(string: path, relativeTo: host)
+        
+        return Alamofire.request(requestURL!, headers: headers)
+    }
+    
+    /// QiitaAPI v2 認証ユーザ記事一覧
+    /// https://qiita.com/api/v2/docs#get-apiv2authenticated_useritems
+    func authenticatedUserItems() -> DataRequest {
+        let path = "/api/v2/authenticated_user/items"
+        let requestURL = URL(string: path, relativeTo: host)
+        
+        return Alamofire.request(requestURL!, headers: headers)
+    }
+    
     /// QiitaAPI v2 記事一覧検索
     /// https://qiita.com/api/v2/docs#get-apiv2items
     ///

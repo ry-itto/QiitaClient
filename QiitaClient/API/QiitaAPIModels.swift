@@ -131,6 +131,36 @@ struct QiitaAPI {
         let token: String
     }
     
+    // 認証ユーザモデル
+    struct AuthenticatedUserInfo: Decodable {
+        let description: String?
+        let facebookId: String?
+        let followeesCount: Int
+        let followersCount: Int
+        let githubLoginName: String?
+        let id: String
+        let itemsCount: Int
+        let linkedinId: String?
+        let location: String?
+        let name: String
+        let organization: String?
+        let permanentId: Int
+        let profileImageUrl: URL?
+        let teamOnly: Bool
+        let twitterScreenName: String?
+        let websiteUrlString: String?
+        let imageMonthlyUploadLimit: Int
+        let imageMonthlyUploadRemaining: Int
+        
+        var websiteUrl: URL? {
+            guard let string = websiteUrlString,
+                !string.isEmpty else {
+                    return nil
+            }
+            return URL(string: string)
+        }
+    }
+    
     enum APIError: Error {
         case decode
     }

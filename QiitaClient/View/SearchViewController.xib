@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="QiitaClientApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="QiitaClient" customModuleProvider="target">
             <connections>
                 <outlet property="filterButton" destination="n0O-su-N7e" id="zXb-nV-r8Z"/>
                 <outlet property="searchBar" destination="Xhy-5d-FKR" id="Bdn-xs-h7f"/>
@@ -24,15 +24,15 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aRv-Xo-zfm">
-                    <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                    <rect key="frame" x="0.0" y="186" width="375" height="481"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Xhy-5d-FKR">
-                    <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                    <rect key="frame" x="0.0" y="90" width="375" height="56"/>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PoF-ZW-yCW">
-                    <rect key="frame" x="0.0" y="76" width="375" height="40"/>
+                    <rect key="frame" x="0.0" y="146" width="375" height="40"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0O-su-N7e">
                             <rect key="frame" x="133.5" y="5" width="108" height="30"/>
@@ -46,6 +46,23 @@
                         <constraint firstAttribute="height" constant="40" id="iWc-x6-0No"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Z0-tT-Gzb">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qiita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8X-dP-OjY">
+                            <rect key="frame" x="157.5" y="39" width="60" height="36"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.36122342940000002" green="0.77514213320000003" blue="0.195378989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="A8X-dP-OjY" secondAttribute="bottom" constant="15" id="1k3-nJ-7Ez"/>
+                        <constraint firstAttribute="height" constant="90" id="X8G-1W-rHo"/>
+                        <constraint firstItem="A8X-dP-OjY" firstAttribute="centerX" secondItem="7Z0-tT-Gzb" secondAttribute="centerX" id="gQO-F6-qNd"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -53,12 +70,15 @@
                 <constraint firstItem="Xhy-5d-FKR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Jq3-Jd-AkR"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PoF-ZW-yCW" secondAttribute="trailing" id="STc-OB-Y8K"/>
                 <constraint firstItem="aRv-Xo-zfm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SgA-NV-XZV"/>
-                <constraint firstItem="Xhy-5d-FKR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="buh-9B-Fh8"/>
+                <constraint firstItem="Xhy-5d-FKR" firstAttribute="top" secondItem="7Z0-tT-Gzb" secondAttribute="bottom" id="Y34-bg-sHM"/>
+                <constraint firstItem="7Z0-tT-Gzb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="cRE-4I-v8S"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aRv-Xo-zfm" secondAttribute="trailing" id="d8m-zo-EVa"/>
                 <constraint firstItem="PoF-ZW-yCW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eXk-HB-ydC"/>
                 <constraint firstItem="PoF-ZW-yCW" firstAttribute="bottom" secondItem="aRv-Xo-zfm" secondAttribute="top" id="feC-O9-PnS"/>
                 <constraint firstItem="PoF-ZW-yCW" firstAttribute="top" secondItem="Xhy-5d-FKR" secondAttribute="bottom" id="lB2-ra-9OP"/>
+                <constraint firstItem="7Z0-tT-Gzb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="m45-g2-jjj"/>
                 <constraint firstAttribute="trailing" secondItem="Xhy-5d-FKR" secondAttribute="trailing" id="tOu-YZ-eII"/>
+                <constraint firstAttribute="trailing" secondItem="7Z0-tT-Gzb" secondAttribute="trailing" id="xPZ-8V-3b5"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="140" y="154.27286356821591"/>

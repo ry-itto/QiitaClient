@@ -33,6 +33,10 @@
 		BF20A121223CB61700CC4275 /* QiitaAPIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20A120223CB61700CC4275 /* QiitaAPIModels.swift */; };
 		BF20A123223CC1F400CC4275 /* QiitaSearchDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20A122223CC1F400CC4275 /* QiitaSearchDataProvider.swift */; };
 		BF20A148223DE5B700CC4275 /* QiitaArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF20A147223DE5B700CC4275 /* QiitaArticleCell.xib */; };
+		BF7CC151224F9E890041CAA2 /* AuthenticatedUserDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CC150224F9E890041CAA2 /* AuthenticatedUserDataProvider.swift */; };
+		BF7CC154224F9EF30041CAA2 /* AuthenticatedUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CC152224F9EF30041CAA2 /* AuthenticatedUserProfileViewController.swift */; };
+		BF7CC155224F9EF30041CAA2 /* AuthenticatedUserProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF7CC153224F9EF30041CAA2 /* AuthenticatedUserProfileViewController.xib */; };
+		BF7CC157224F9F2C0041CAA2 /* AuthenticatedUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CC156224F9F2C0041CAA2 /* AuthenticatedUserViewModel.swift */; };
 		BFF669E8223FDFD400A3976C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF669E7223FDFD400A3976C /* WebViewController.swift */; };
 		BFF669EA223FDFF200A3976C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF669E9223FDFF200A3976C /* WebKit.framework */; };
 		BFFD7C18223A9C7200AB761D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFD7C17223A9C7200AB761D /* AppDelegate.swift */; };
@@ -100,6 +104,10 @@
 		BF20A120223CB61700CC4275 /* QiitaAPIModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAPIModels.swift; sourceTree = "<group>"; };
 		BF20A122223CC1F400CC4275 /* QiitaSearchDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaSearchDataProvider.swift; sourceTree = "<group>"; };
 		BF20A147223DE5B700CC4275 /* QiitaArticleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QiitaArticleCell.xib; sourceTree = "<group>"; };
+		BF7CC150224F9E890041CAA2 /* AuthenticatedUserDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedUserDataProvider.swift; sourceTree = "<group>"; };
+		BF7CC152224F9EF30041CAA2 /* AuthenticatedUserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedUserProfileViewController.swift; sourceTree = "<group>"; };
+		BF7CC153224F9EF30041CAA2 /* AuthenticatedUserProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticatedUserProfileViewController.xib; sourceTree = "<group>"; };
+		BF7CC156224F9F2C0041CAA2 /* AuthenticatedUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedUserViewModel.swift; sourceTree = "<group>"; };
 		BFCE40A3223BF98700935AF4 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		BFCE40A4223BF98700935AF4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		BFF669E7223FDFD400A3976C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
@@ -223,6 +231,8 @@
 		BFFD7C31223A9FED00AB761D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BF7CC152224F9EF30041CAA2 /* AuthenticatedUserProfileViewController.swift */,
+				BF7CC153224F9EF30041CAA2 /* AuthenticatedUserProfileViewController.xib */,
 				BFFD7C41223BC7FF00AB761D /* Cell */,
 				BF1401762243DC85004F4DAF /* LoginViewController.swift */,
 				BF1401772243DC85004F4DAF /* LoginViewController.xib */,
@@ -240,6 +250,7 @@
 		BFFD7C32223A9FF400AB761D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				BF7CC156224F9F2C0041CAA2 /* AuthenticatedUserViewModel.swift */,
 				BF14016722427B9C004F4DAF /* ModalEventWrapper.swift */,
 				BF20A11E223CAFDC00CC4275 /* SearchViewModel.swift */,
 				BF14016922427BD2004F4DAF /* TagListViewModel.swift */,
@@ -260,6 +271,7 @@
 		BFFD7C34223AA00A00AB761D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BF7CC150224F9E890041CAA2 /* AuthenticatedUserDataProvider.swift */,
 				BF1401702243C148004F4DAF /* QiitaAccountService.swift */,
 				BF20A122223CC1F400CC4275 /* QiitaSearchDataProvider.swift */,
 				BFFD7C3D223AA6C100AB761D /* QiitaTrendDataProvider.swift */,
@@ -372,6 +384,7 @@
 				BF20A11B223CA61500CC4275 /* SearchViewController.xib in Resources */,
 				BF140162224279EB004F4DAF /* TagListViewController.xib in Resources */,
 				BFFD7C38223AA05A00AB761D /* TrendsViewController.xib in Resources */,
+				BF7CC155224F9EF30041CAA2 /* AuthenticatedUserProfileViewController.xib in Resources */,
 				BF14019D22453313004F4DAF /* Config.plist in Resources */,
 				BFFD7C22223A9C7A00AB761D /* LaunchScreen.storyboard in Resources */,
 				BF20A148223DE5B700CC4275 /* QiitaArticleCell.xib in Resources */,
@@ -431,7 +444,10 @@
 				BF20A121223CB61700CC4275 /* QiitaAPIModels.swift in Sources */,
 				BFFD7C3C223AA22100AB761D /* QiitaAPIGateway.swift in Sources */,
 				BF1401782243DC85004F4DAF /* LoginViewController.swift in Sources */,
+				BF7CC151224F9E890041CAA2 /* AuthenticatedUserDataProvider.swift in Sources */,
+				BF7CC157224F9F2C0041CAA2 /* AuthenticatedUserViewModel.swift in Sources */,
 				BFF669E8223FDFD400A3976C /* WebViewController.swift in Sources */,
+				BF7CC154224F9EF30041CAA2 /* AuthenticatedUserProfileViewController.swift in Sources */,
 				BF14015C2241432F004F4DAF /* UIImageViewExtension.swift in Sources */,
 				BF20A11F223CAFDC00CC4275 /* SearchViewModel.swift in Sources */,
 				BFFD7C47223BD22D00AB761D /* TrendViewModel.swift in Sources */,
