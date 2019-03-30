@@ -32,7 +32,7 @@ final class QiitaAPIGateway {
     }()
     
     private init() {
-        accessToken = UserDefaults.standard.string(forKey: "qiita_access_token")!
+        accessToken = UserDefaults.standard.string(forKey: "qiita_access_token") ?? ""
     }
     
     static let shared = QiitaAPIGateway()

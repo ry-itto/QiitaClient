@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [
             TrendsViewController.instantiateWithTabBarItem(),
-            SearchViewController.instantiateWithTabBarItem()
+            SearchViewController.instantiateWithTabBarItem(),
+            AuthenticatedUserProfileViewController.instantiateWithTabBarItem()
         ]
         
         let window = UIWindow(frame: UIScreen.main.bounds)
