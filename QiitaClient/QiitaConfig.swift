@@ -16,6 +16,7 @@ class QiitaConfig {
     let clientSecret: String
     let redirectURL: URL
 
+    // MARK: - 以下，開発者の設定の関係上なのでアプリ自体を落としている
     private init() {
         let filePath = Bundle.main.path(forResource: "Config", ofType: "plist")
         guard let config = NSDictionary(contentsOfFile: filePath!) else {

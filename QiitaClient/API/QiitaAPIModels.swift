@@ -10,6 +10,7 @@ import Foundation
 
 struct QiitaAPI {
     
+    /// Qiita記事モデル
     struct Article: Decodable {
         let renderedBody: String
         let body: String
@@ -115,6 +116,7 @@ struct QiitaAPI {
         }
     }
     
+    /// Qiitaタグモデル
     struct TagInfo: Decodable {
         let followersCount: Int
         let iconUrl: URL?
@@ -122,6 +124,7 @@ struct QiitaAPI {
         let itemsCount: Int
     }
     
+    /// アクセストークンモデル
     struct AccessToken: Decodable {
         let clientId: String
         let scopes: [String]
