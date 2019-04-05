@@ -16,7 +16,7 @@ final class AuthenticatedUserViewModelViewModel {
     let viewDidLoad: AnyObserver<Void>
     let fetchUserInfo: Observable<QiitaAPI.AuthenticatedUserInfo>
     
-    init(_ provider: UserProfileDataProviderProtocol = UserProfileDataProvider()) {
+    init(_ provider: AuthenticatedUserDataProviderProtocol = AuthenticatedUserDataProvider()) {
         
         let viewDidLoadSubject = PublishSubject<Void>()
         let fetchUserInfoSubject = PublishSubject<QiitaAPI.AuthenticatedUserInfo>()
@@ -25,17 +25,9 @@ final class AuthenticatedUserViewModelViewModel {
         fetchUserInfo = fetchUserInfoSubject.asObservable()
         
         viewDidLoadSubject.asObservable()
-            .flatMap { provider.fetchUserInfo() }
-            .materialize()
-            .subscribe(onNext: { event in
-                switch event {
-                case let .next(element):
-                    fetchUserInfoSubject.onNext(element)
-                case .error:
-                    break
-                default:
-                    break
-                }
-            }).disposed(by: disposeBag)
+            .flatMap { provider.fetchUserInfo().materialize() }
+            .flatMap { $0.element.map(Observable.just) ?? .empty() }
+            .bind(to: fetchUserInfoSubject)
+            .disposed(by: disposeBag)
     }
 }

@@ -9,11 +9,11 @@
 import RxSwift
 import RxCocoa
 
-protocol UserProfileDataProviderProtocol {
+protocol AuthenticatedUserDataProviderProtocol {
     func fetchUserInfo() -> Observable<QiitaAPI.AuthenticatedUserInfo>
 }
 
-class UserProfileDataProvider: UserProfileDataProviderProtocol {
+class AuthenticatedUserDataProvider: AuthenticatedUserDataProviderProtocol {
     
     let gateway = QiitaAPIGateway.shared
     
