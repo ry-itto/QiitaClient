@@ -18,6 +18,7 @@ jobs:
       run: xcrun instruments -s
     - name: Cache Carthage
       uses: actions/cache@preview
+      id: cache
       with:
         path: Carthage
         key: ${{ runner.os }}-carthage-${{ hashFiles('**/Cartfile.resolved') }}
