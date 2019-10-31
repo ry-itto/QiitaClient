@@ -20,7 +20,6 @@
 		BF1401712243C148004F4DAF /* QiitaAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1401702243C148004F4DAF /* QiitaAccountService.swift */; };
 		BF1401782243DC85004F4DAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1401762243DC85004F4DAF /* LoginViewController.swift */; };
 		BF1401792243DC85004F4DAF /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF1401772243DC85004F4DAF /* LoginViewController.xib */; };
-		BF14019D22453313004F4DAF /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF14019C22453313004F4DAF /* Config.plist */; };
 		BF14019F22453482004F4DAF /* QiitaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF14019E22453482004F4DAF /* QiitaConfig.swift */; };
 		BF20A108223BF9F700CC4275 /* QiitaClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20A107223BF9F700CC4275 /* QiitaClientTests.swift */; };
 		BF20A10F223BFB4300CC4275 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCE40A3223BF98700935AF4 /* Nimble.framework */; };
@@ -33,6 +32,7 @@
 		BF20A121223CB61700CC4275 /* QiitaAPIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20A120223CB61700CC4275 /* QiitaAPIModels.swift */; };
 		BF20A123223CC1F400CC4275 /* QiitaSearchDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20A122223CC1F400CC4275 /* QiitaSearchDataProvider.swift */; };
 		BF20A148223DE5B700CC4275 /* QiitaArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF20A147223DE5B700CC4275 /* QiitaArticleCell.xib */; };
+		BF2DCB35236AC2820004914D /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF2DCB34236AC2820004914D /* Config.plist */; };
 		BF7CC151224F9E890041CAA2 /* AuthenticatedUserDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CC150224F9E890041CAA2 /* AuthenticatedUserDataProvider.swift */; };
 		BF7CC154224F9EF30041CAA2 /* AuthenticatedUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CC152224F9EF30041CAA2 /* AuthenticatedUserProfileViewController.swift */; };
 		BF7CC155224F9EF30041CAA2 /* AuthenticatedUserProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF7CC153224F9EF30041CAA2 /* AuthenticatedUserProfileViewController.xib */; };
@@ -42,7 +42,6 @@
 		BFFD7C18223A9C7200AB761D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFD7C17223A9C7200AB761D /* AppDelegate.swift */; };
 		BFFD7C1F223A9C7A00AB761D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFFD7C1E223A9C7A00AB761D /* Assets.xcassets */; };
 		BFFD7C22223A9C7A00AB761D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFFD7C20223A9C7A00AB761D /* LaunchScreen.storyboard */; };
-		BFFD7C2D223A9EBE00AB761D /* RxAtomic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFD7C2A223A9EBE00AB761D /* RxAtomic.framework */; };
 		BFFD7C2E223A9EBE00AB761D /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFD7C2B223A9EBE00AB761D /* RxCocoa.framework */; };
 		BFFD7C2F223A9EBE00AB761D /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFD7C2C223A9EBE00AB761D /* RxSwift.framework */; };
 		BFFD7C37223AA05A00AB761D /* TrendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFD7C35223AA05A00AB761D /* TrendsViewController.swift */; };
@@ -93,7 +92,6 @@
 		BF1401702243C148004F4DAF /* QiitaAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAccountService.swift; sourceTree = "<group>"; };
 		BF1401762243DC85004F4DAF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BF1401772243DC85004F4DAF /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		BF14019C22453313004F4DAF /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		BF14019E22453482004F4DAF /* QiitaConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaConfig.swift; sourceTree = "<group>"; };
 		BF20A105223BF9F600CC4275 /* QiitaClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QiitaClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF20A107223BF9F700CC4275 /* QiitaClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaClientTests.swift; sourceTree = "<group>"; };
@@ -104,6 +102,7 @@
 		BF20A120223CB61700CC4275 /* QiitaAPIModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAPIModels.swift; sourceTree = "<group>"; };
 		BF20A122223CC1F400CC4275 /* QiitaSearchDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaSearchDataProvider.swift; sourceTree = "<group>"; };
 		BF20A147223DE5B700CC4275 /* QiitaArticleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QiitaArticleCell.xib; sourceTree = "<group>"; };
+		BF2DCB34236AC2820004914D /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		BF7CC150224F9E890041CAA2 /* AuthenticatedUserDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedUserDataProvider.swift; sourceTree = "<group>"; };
 		BF7CC152224F9EF30041CAA2 /* AuthenticatedUserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedUserProfileViewController.swift; sourceTree = "<group>"; };
 		BF7CC153224F9EF30041CAA2 /* AuthenticatedUserProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticatedUserProfileViewController.xib; sourceTree = "<group>"; };
@@ -148,7 +147,6 @@
 				BFF669EA223FDFF200A3976C /* WebKit.framework in Frameworks */,
 				BFFD7C40223AA94800AB761D /* Kanna.framework in Frameworks */,
 				BFFD7C3A223AA0DA00AB761D /* Alamofire.framework in Frameworks */,
-				BFFD7C2D223A9EBE00AB761D /* RxAtomic.framework in Frameworks */,
 				BFFD7C2E223A9EBE00AB761D /* RxCocoa.framework in Frameworks */,
 				BFFD7C2F223A9EBE00AB761D /* RxSwift.framework in Frameworks */,
 			);
@@ -178,6 +176,7 @@
 		BFFD7C0B223A9C7200AB761D = {
 			isa = PBXGroup;
 			children = (
+				BF2DCB34236AC2820004914D /* Config.plist */,
 				BFFD7C16223A9C7200AB761D /* QiitaClient */,
 				BF20A106223BF9F700CC4275 /* QiitaClientTests */,
 				BFFD7C15223A9C7200AB761D /* Products */,
@@ -200,7 +199,6 @@
 				BFFD7C33223A9FFB00AB761D /* API */,
 				BFFD7C17223A9C7200AB761D /* AppDelegate.swift */,
 				BFFD7C1E223A9C7A00AB761D /* Assets.xcassets */,
-				BF14019C22453313004F4DAF /* Config.plist */,
 				BF14015A224142FE004F4DAF /* Extensions */,
 				BFFD7C23223A9C7A00AB761D /* Info.plist */,
 				BFFD7C20223A9C7A00AB761D /* LaunchScreen.storyboard */,
@@ -385,7 +383,7 @@
 				BF140162224279EB004F4DAF /* TagListViewController.xib in Resources */,
 				BFFD7C38223AA05A00AB761D /* TrendsViewController.xib in Resources */,
 				BF7CC155224F9EF30041CAA2 /* AuthenticatedUserProfileViewController.xib in Resources */,
-				BF14019D22453313004F4DAF /* Config.plist in Resources */,
+				BF2DCB35236AC2820004914D /* Config.plist in Resources */,
 				BFFD7C22223A9C7A00AB761D /* LaunchScreen.storyboard in Resources */,
 				BF20A148223DE5B700CC4275 /* QiitaArticleCell.xib in Resources */,
 				BF14016622427A12004F4DAF /* QiitaTagCell.xib in Resources */,
@@ -407,7 +405,6 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxAtomic.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kanna.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",

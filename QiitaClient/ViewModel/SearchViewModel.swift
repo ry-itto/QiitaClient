@@ -57,7 +57,7 @@ class SearchViewModel {
         
         input.search
             .distinctUntilChanged()
-            .debounce(0.3, scheduler: ConcurrentMainScheduler.instance)
+            .debounce(.milliseconds(300), scheduler: ConcurrentMainScheduler.instance)
             .flatMap { query -> Observable<[QiitaAPI.Article]> in
                 page = 2
                 return provider.fetchArticles(page: 1, query: query)
