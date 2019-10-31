@@ -25,5 +25,3 @@ jobs:
           ${{ runner.os }}-carthage-
     - name: Install Dependencies
       run: carthage bootstrap --platform iOS
-    - name: XcodeBuild
-      run: xcodebuild
