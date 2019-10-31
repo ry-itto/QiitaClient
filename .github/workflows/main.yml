@@ -23,3 +23,5 @@ jobs:
           ${{ runner.os }}-carthage-
     - name: Install Dependencies
       run: carthage update --platform iOS
+    - name: XcodeBuild
+      run: xcodebuild
