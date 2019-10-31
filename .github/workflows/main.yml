@@ -1,0 +1,27 @@
+name: CI
+
+on: [push]
+
+jobs:
+  example:
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_11.app
+    runs-on: macOS-latest
+    strategy:
+        matrix:
+          destination: ['platform=iOS Simulator,OS=12.4,name=iPhone Xs']
+    steps:
+    - uses: actions/checkout@v1
+    - name: macOS version
+      run: sw_vers
+    - name: Simulators
+      run: xcrun instruments -s
+    - name: Cache Carthage
+      uses: actions/cache@preview
+      with:
+        path: Carthage
+        key: ${{ runner.os }}-carthage-${{ hashFiles('**/Cartfile.resolved') }}
+        restore-keys: |
+          ${{ runner.os }}-carthage-
+    - name: Install Dependencies
+      run: carthage bootstrap --platform iOS

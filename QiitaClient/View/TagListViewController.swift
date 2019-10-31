@@ -56,7 +56,7 @@ class TagListViewController: UIViewController {
             .disposed(by: disposeBag)
         
         tableView.rx.didScroll.asObservable()
-            .debounce(0.5, scheduler: ConcurrentMainScheduler.instance)
+            .debounce(.milliseconds(500), scheduler: ConcurrentMainScheduler.instance)
             .bind(to: Binder(self) { me, _ in
                 if me.tableView.isNearBottomEdge(edgeOffset: 500) {
                     me.viewModel.addTags.onNext(())
