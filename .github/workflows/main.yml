@@ -18,7 +18,7 @@ jobs:
       uses: actions/cache@preview
       with:
         path: Carthage
-        key: ${{ runner.os }}-carthage-${{ hashFiles('**/Cartfile.lock') }}
+        key: ${{ runner.os }}-carthage-${{ hashFiles('**/Cartfile.resolved') }}
         restore-keys: |
           ${{ runner.os }}-carthage-
     - name: Install Dependencies
