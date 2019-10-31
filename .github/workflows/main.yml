@@ -4,6 +4,8 @@ on: [push]
 
 jobs:
   example:
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_11.app
     runs-on: macOS-latest
     strategy:
         matrix:
@@ -22,6 +24,6 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-carthage-
     - name: Install Dependencies
-      run: carthage update --platform iOS
+      run: carthage bootstrap --platform iOS
     - name: XcodeBuild
       run: xcodebuild
